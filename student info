@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main ()
+{
+    struct student
+    {
+        char name [40] ;
+        int age ;
+        int marks;
+    };
+
+        struct student s1,s2 ;
+
+        printf("Enter the name of the student 1 ");
+        fgets(s1.name,40,stdin); 
+        printf("Enter the age of the student 1 ");
+        scanf("%d",&s1.age); 
+        printf("Enter the marks of the student 1 ");
+        scanf("%d",&s1.marks); 
+        printf("STUDENT 1 : \n name = %s age = %d\n marks = %d \n\n ",s1.name, s1.age, s1.marks );
+
+        printf("Enter the name of the student 2 ");
+        scanf("%s",&s2.name); 
+        printf("Enter the age of the student 2 ");
+        scanf("%d",&s2.age); 
+        printf("Enter the marks of the student 2 ");
+        scanf("%d",&s2.marks); 
+        printf("STUDENT 2 : \n name = %s\n age = %d\n marks = %d \n\n Average Marks : %d ",s2.name, s2.age, s2.marks, (s1.marks+s2.marks)/2);
+    
+    return 0;
+}
