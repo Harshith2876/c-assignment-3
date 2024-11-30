@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main ()
+{
+    struct time
+    {
+        int hrs ;
+        int min ;
+        int sec ;
+    };
+
+        struct time t1,t2 ;
+
+        printf("Enter the time 1 in hours ");
+        scanf("%d",&t1.hrs); 
+        printf("Enter the time 1 in minutes ");
+        scanf("%d",&t1.min); 
+        printf("Enter the time 1 in sec ");
+        scanf("%d",&t1.sec); 
+
+        printf("Enter the time 2 in hours");
+        scanf("%d",&t2.hrs); 
+        printf("Enter the time 2 in min ");
+        scanf("%d",&t2.min); 
+        printf("Enter the time 2 in seconds ");
+        scanf("%d",&t2.sec); 
+        
+        int tothrs = t1.hrs + t2.hrs, totmin = t1.min+t2.min , totsec=t1.sec+t2.sec ;
+        
+        if(totsec>=60)
+        {
+            totsec = totsec-60;
+            totmin += 1 ;
+        }
+
+        if(totmin>=60)
+        {
+            totmin = totmin-60;
+            tothrs += 1 ;
+        }
+    
+    printf("total time = %d : %d : %d" ,tothrs,totmin,totsec);
+
+        
+    
+    return 0;
+}
